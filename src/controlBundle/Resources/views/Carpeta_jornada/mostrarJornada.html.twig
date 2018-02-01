@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+<hr>
+  {% for jornada in TablaJornada %}
+  <h1>{{jornada.nombre}}</h1>
+  <h3>{{jornada.rival}}</h3>
+  - <a href="{{ path('actualizar_jornada', {'id': jornada.id} ) }}"> Actualizar</a>
+                        - <a href="{{ path('eliminar_campo_jornada', {'id': jornada.id} ) }}"> Borrar</a>
+
+  {% endfor %}
+{% endblock %}

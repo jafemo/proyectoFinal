@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<hr>
+  {% for plantilla in TablaPlantilla %}
+      <h1>{{plantilla.nombre}}</h1>
+      <h3>{{plantilla.apellidos}}</h3>
+      <h3>{{plantilla.posicion}}</h3>
+      <h3>{{plantilla.edad}}</h3>
+        - <a href="{{ path('actualizar_plantilla', {'id': plantilla.id} ) }}"> Actualizar</a>
+                          - <a href="{{ path('eliminar_campo', {'id': plantilla.id} ) }}"> Borrar</a>
+  {% endfor %}
+{% endblock %}
