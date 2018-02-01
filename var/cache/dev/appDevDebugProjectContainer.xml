@@ -614,7 +614,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>DgAn9SYY0vf-SbuDLABGss</argument>
+      <argument>MVdlWg-QrhF6E57CUB+1Jr</argument>
       <argument>/Users/javi/Documents/symfony/proyectoDeporte/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -624,7 +624,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>DgAn9SYY0vf-SbuDLABGss</argument>
+      <argument>MVdlWg-QrhF6E57CUB+1Jr</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1861,6 +1861,13 @@
         <argument>null</argument>
       </call>
       <call method="add">
+        <argument type="service" id="security.request_matcher.bd1cb858aa2b330bfb0986f3a3c5b404a40ff8b92a2aeab7c88ffb28c1c48b4126604913"/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
         <argument type="service" id="security.request_matcher.41091f70e80f3936f117ff4e6751842a93fdf2b8491e2b284ce03ec84464d46405047129"/>
         <argument type="collection">
           <argument>IS_AUTHENTICATED_ANONYMOUSLY</argument>
@@ -2377,12 +2384,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.usuarios" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5a71df70334e25.06200508</argument>
+      <argument>5a72ff1d440441.35107995</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.usuarios" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5a71df70334e25.06200508</argument>
+      <argument>5a72ff1d440441.35107995</argument>
     </service>
     <service id="security.exception_listener.usuarios" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -2417,6 +2424,9 @@
     </service>
     <service id="security.request_matcher.1bda14e8f3cf8dff1bc1f0a3a8c56a0d7ad2b62b8556ea2624513341c6024209bdb1b07f" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/CUD</argument>
+    </service>
+    <service id="security.request_matcher.bd1cb858aa2b330bfb0986f3a3c5b404a40ff8b92a2aeab7c88ffb28c1c48b4126604913" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/usuarios/CUD</argument>
     </service>
     <service id="security.request_matcher.41091f70e80f3936f117ff4e6751842a93fdf2b8491e2b284ce03ec84464d46405047129" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/</argument>
@@ -3684,7 +3694,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>-FAID94C2d</argument>
       <argument>0</argument>
-      <argument>DgAn9SYY0vf-SbuDLABGss</argument>
+      <argument>MVdlWg-QrhF6E57CUB+1Jr</argument>
       <argument>/Users/javi/Documents/symfony/proyectoDeporte/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3692,7 +3702,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>4wb6q5vgQ0</argument>
       <argument>0</argument>
-      <argument>DgAn9SYY0vf-SbuDLABGss</argument>
+      <argument>MVdlWg-QrhF6E57CUB+1Jr</argument>
       <argument>/Users/javi/Documents/symfony/proyectoDeporte/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3700,7 +3710,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>sQr-yRRKdk</argument>
       <argument>0</argument>
-      <argument>DgAn9SYY0vf-SbuDLABGss</argument>
+      <argument>MVdlWg-QrhF6E57CUB+1Jr</argument>
       <argument>/Users/javi/Documents/symfony/proyectoDeporte/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3708,7 +3718,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>cJne+ey8Q6</argument>
       <argument>0</argument>
-      <argument>DgAn9SYY0vf-SbuDLABGss</argument>
+      <argument>MVdlWg-QrhF6E57CUB+1Jr</argument>
       <argument>/Users/javi/Documents/symfony/proyectoDeporte/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

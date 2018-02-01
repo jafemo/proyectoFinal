@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<hr>
+  {% for user in TablaUser %}
+      <h1>{{user.username}}</h1>
+      <h3>{{user.email}}</h3>
+      - <a href="{{ path('actualizar_usuarios', {'id': user.id} ) }}"> Actualizar</a>
+      - <a href="{{ path('eliminar_usuario', {'id': user.id} ) }}"> Borrar</a>
+  {% endfor %}
+{% endblock %}

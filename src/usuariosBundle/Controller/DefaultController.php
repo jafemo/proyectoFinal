@@ -10,20 +10,11 @@ use usuariosBundle\Form\userType;
 
 class DefaultController extends Controller
 {
-    /**
-     * @Route("/")
-     */
-    public function indexAction()
-    {
-        return $this->render('usuariosBundle:Default:index.html.twig');
-    }
-    /**
-     * @Route("/usuario")
-     */
     public function usuariosAction()
     {
-        return $this->render('tapasBundle:Carpeta_Tapas:index.html.twig');
+        return $this->render('usuariosBundle:Carpeta_User:login.html.twig');
     }
+
     /**
      * @Route("/login", name="login_user")
      */

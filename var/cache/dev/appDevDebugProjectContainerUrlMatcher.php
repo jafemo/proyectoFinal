@@ -104,20 +104,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         elseif (0 === strpos($pathinfo, '/usuarios')) {
-            // usuarios_default_index
-            if ('/usuarios' === $trimmedPathinfo) {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($rawPathinfo.'/', 'usuarios_default_index');
-                }
-
-                return array (  '_controller' => 'usuariosBundle\\Controller\\DefaultController::indexAction',  '_route' => 'usuarios_default_index',);
-            }
-
-            // usuarios_default_usuarios
-            if ('/usuarios/usuario' === $pathinfo) {
-                return array (  '_controller' => 'usuariosBundle\\Controller\\DefaultController::usuariosAction',  '_route' => 'usuarios_default_usuarios',);
-            }
-
             // login_user
             if ('/usuarios/login' === $pathinfo) {
                 return array (  '_controller' => 'usuariosBundle\\Controller\\DefaultController::loginAction',  '_route' => 'login_user',);
@@ -131,6 +117,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             // user_registration
             if ('/usuarios/register' === $pathinfo) {
                 return array (  '_controller' => 'usuariosBundle\\Controller\\DefaultController::registerAction',  '_route' => 'user_registration',);
+            }
+
+            // mostrar_usuarios
+            if ('/usuarios/mostrar' === $pathinfo) {
+                return array (  '_controller' => 'usuariosBundle\\Controller\\listarController::mostrarUsuariosAction',  '_route' => 'mostrar_usuarios',);
+            }
+
+            // actualizar_usuarios
+            if (0 === strpos($pathinfo, '/usuarios/CUD/actualizar') && preg_match('#^/usuarios/CUD/actualizar/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'actualizar_usuarios')), array (  '_controller' => 'usuariosBundle\\Controller\\listarController::actualizarUsuariosAction',));
+            }
+
+            // eliminar_usuario
+            if (0 === strpos($pathinfo, '/usuarios/CUD/eliminar') && preg_match('#^/usuarios/CUD/eliminar/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'eliminar_usuario')), array (  '_controller' => 'usuariosBundle\\Controller\\listarController::eliminarUsuarioAction',));
             }
 
         }
