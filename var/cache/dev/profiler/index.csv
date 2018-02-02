@@ -1455,3 +1455,14 @@ bd97d3,127.0.0.1,GET,http://localhost:8000/usuarios/CUD/actualizar/3,1517488046,
 f63350,127.0.0.1,GET,http://localhost:8000/usuarios/CUD/actualizar/3,1517488046,,403
 c99dd3,127.0.0.1,GET,http://localhost:8000/usuarios/CUD/eliminar/3,1517488050,691e77,200
 691e77,127.0.0.1,GET,http://localhost:8000/usuarios/CUD/eliminar/3,1517488050,,403
+22cbe7,127.0.0.1,GET,http://localhost:8000/,1517524869,,200
+9d6934,127.0.0.1,GET,http://localhost:8000/usuarios/mostrar,1517524871,,200
+9688b2,127.0.0.1,GET,http://localhost:8000/usuarios/logout,1517524876,,302
+31b839,127.0.0.1,GET,http://localhost:8000/usuarios/login,1517524876,,200
+d727d5,127.0.0.1,GET,http://localhost:8000/plantilla,1517524879,,200
+595840,127.0.0.1,GET,http://localhost:8000/CUD/actualizarPlantilla/10,1517524881,,302
+fc9aa4,127.0.0.1,GET,http://localhost:8000/usuarios/login,1517524881,,200
+ad800e,127.0.0.1,GET,http://localhost:8000/usuarios/mostrar,1517524883,,200
+ed1c6d,127.0.0.1,GET,http://localhost:8000/usuarios/CUD/actualizar/3,1517524884,,302
+d8578a,127.0.0.1,GET,http://localhost:8000/usuarios/login,1517524885,,200
+1069af,127.0.0.1,GET,http://localhost:8000/plantilla,1517524886,,200
